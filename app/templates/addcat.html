@@ -1,0 +1,21 @@
+
+		<div>
+			<div>
+				<h3>Add a cat</h3>
+				<form  name="CatForm" method="/getdafsd" novalidate ng-submit = "saveCat($event, cat)" my-submit>
+				<div>
+					<input name = "cName" type = "text" placeholder = "cat name" required ng-model = "cat.name">
+				</div>
+				<div ng-show="CatForm.$submitted || CatForm.cName.$touched">
+					<div ng-show="CatForm.cName.$error.required">Enter name.</div>
+				</div>
+				<div my-innerform="cat.imageurl">
+				</div>
+				<div>
+
+					<input type="submit" ng-disabled = "CatForm.$invalid">
+					<input type = "button" value="cancel">
+		
+				</div>
+			</div>
+		</div>
