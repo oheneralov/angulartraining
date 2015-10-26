@@ -1,20 +1,26 @@
-<div >
-	<input my-focus type = "text" placeholder = "search" ng-model = "searchedCat">
-				<input type = "button" value = "search" ng-click = "searchCats(searchedCat)">
-				<select ng-model = "CatsOrder">
-					<option value = "">Ascend</option>
-					<option value = "reverse">Descend</option>
-				</select>
-				<ul >
-					<li ng-repeat = "currentcat in catsinfo | filter:searchText | orderBy:'-name':CatsOrder" ng-click="showCat(currentcat)">{{currentcat.name}}
-					<span ng-show="currentcat.isviewed">&nbsp;yes</span>
-					</li>
-				</ul>
-				<div>
-					<h3>{{cat2display.name}}</h3>
-					<img ng-src="{{cat2display.photo}}" >
-					<div>Votes: {{cat2display.votes}} </div>
-				</div>
-				<div vote-spinner = "cat2display.votes">
-				</div>
+<div>
+    <input my-focus type="text" placeholder="search" ng-model="searchedCat">
+    <input type="button" value="search" ng-click="searchCats(searchedCat)">
+    <select ng-model="CatsOrder">
+        <option value="">Ascend</option>
+        <option value="reverse">Descend</option>
+    </select>
+    <ul>
+        <li ng-repeat="currentcat in catsinfo | filter:searchText | orderBy:'-name':CatsOrder"
+            ng-click="showCat(currentcat)">{{currentcat.name}}
+            <span ng-show="currentcat.isviewed">&nbsp;yes</span>
+        </li>
+    </ul>
+    <div>
+        <div ng-show = "hasPermission">
+            <a href="#/edit/{{cat2display.id}}">Edit</a> |
+            <a href="#/delete/{{cat2display.id}}">Delete Cat</a>
+        </div>
+        <h3>{{cat2display.name}}</h3>
+        <img ng-src="{{cat2display.photo}}">
+
+        <div>Votes: {{cat2display.votes}}</div>
+    </div>
+    <div vote-spinner="cat2display" updatefun="updateCat(cat2display)">
+    </div>
 </div>

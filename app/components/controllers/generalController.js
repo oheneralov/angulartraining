@@ -10,6 +10,8 @@
                 if (userinfo){
                     $scope.isloggedin = true;
                     $scope.greeting = "logged in as " + userinfo.login;
+                    //console.log($scope.isloggedin);
+
                 }
             }
         );

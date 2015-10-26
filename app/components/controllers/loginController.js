@@ -1,5 +1,5 @@
 ﻿(function(module) {
-	var loginController = function ($scope, $cookies, UserFactory) {
+	var loginController = function ($scope, $cookies, $location, UserFactory) {
 		$scope.greeting = "";
 
 		$scope.loginuser = function(user){
@@ -8,6 +8,7 @@
 				function(result){
 					if (result.data.status == 'success'){
 						$scope.greeting = "You are logged in!";
+						$location.path("/home");
 					}
 					else{
 						$scope.greeting = "Invalid credentials!";

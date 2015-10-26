@@ -11,7 +11,7 @@
             console.log(usermodel);
             console.log(user);
             if ((user.name == usermodel.name) && (user.password == usermodel.password)){
-                console.log("saving to cookies user info");
+                //console.log("saving to cookies user info");
                 $cookies.put('user', angular.toJson(user));
 
             }
@@ -23,7 +23,7 @@
         factory.getUser = function() {
 
             var userfromcookie = angular.fromJson($cookies.get('user'));
-            console.log(userfromcookie);
+            //console.log(userfromcookie);
                 return userfromcookie;
 
 

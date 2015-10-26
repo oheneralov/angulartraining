@@ -11,7 +11,7 @@
         factory.loginUser = function(user) {
             var deferred = $q.defer();
 			$http.post('/auth', user).then(function(response){
-                console.log(response);
+                //console.log(response);
 
                 token = response.data.token;
                 $window.localStorage.setItem('token', token);
@@ -41,9 +41,32 @@
 
 
         };
+		
+		factory.checkPermission = function(owner) {
+			var res = false;
+			if (!userinfo){
+				return false;
+			}
+			if (userinfo.login == owner){
+				res = true;
+			}
+            return res;
+
+
+        };
+		
+		
 		factory.getToken = function(){
 			return token;
 		}
+
+        factory.checkauth = function(){
+            var isauth = false;
+            if (token){
+                isauth = true;
+            }
+            return isauth;
+        }
 
         factory.registerUser = function(user) {
             var deferred = $q.defer();

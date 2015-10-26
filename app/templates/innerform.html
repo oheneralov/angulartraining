@@ -1,11 +1,12 @@
-				<div ng-form="innerForm">
-					<div>
-						<input name = "url" type = "url" placeholder = "http://localhost/images" ng-model = "url" ng-model-options="{ updateOn: 'blur' }" required>
-					</div>
-					<div ng-show="innerForm.$submitted || innerForm.url.$touched">
-						<div ng-show="innerForm.url.$error.required">Enter url.</div>
-					</div>
-				</div>
-									<div>
-						<img ng-src = "{{url}}" />
-					</div>
+<div ng-form="innerForm">
+    <div>
+        <input name="url" type="url" placeholder="http://localhost/images" ng-model="url"
+               ng-model-options="{ updateOn: 'blur' }" required>
+    </div>
+    <div ng-show="innerForm.$submitted || innerForm.url.$touched">
+        <div ng-show="innerForm.url.$error.required">Enter url.</div>
+    </div>
+</div>
+<div>
+    <img ng-src="{{url}}"/>
+</div>

@@ -1,6 +1,6 @@
 ﻿(function(module) {
 
-var addcatController = function ($scope, CatsFactory) {
+var addcatController = function ($scope, $location, CatsFactory) {
 		
 		CatsFactory.getCats().then(
 			function(data){
@@ -13,6 +13,7 @@ var addcatController = function ($scope, CatsFactory) {
 		$scope.saveCat = function(event, cat){
 			event.preventDefault();
 			CatsFactory.saveCat(cat);
+			$location.path("/home");
 		}
 		
 
