@@ -1,13 +1,11 @@
 (function (module) {
     var voteSpinner = function () {
-        //debugger;
         return {
             scope: {
                 cat2display: '=voteSpinner',
                 updatefun: '&'
 
             },
-
             link: function (scope, element, attrs) {
                 //debugger;
                 scope.incrementClicks = function (isup) {
@@ -25,9 +23,6 @@
 
             },
             templateUrl: "templates/votespinner.html",
-
-
-
         };
     };
 

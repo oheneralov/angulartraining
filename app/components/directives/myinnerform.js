@@ -1,21 +1,16 @@
-(function(module) {	
-	var  myInnerform = function() {
-		
-	  return {
-		 scope: {
-			 url: '=myInnerform'
-		 },
-		 
-		link: function(scope, element, attrs) {
-			//scope.url = attrs.cat.imageurl;
+(function (module) {
+    var myInnerform = function () {
 
-		},
-		templateUrl: "templates/innerform.html"
-		
-		
-	  };
-	};
-	
-	module.directive("myInnerform", myInnerform);
-	}(angular.module("app")));
+        return {
+            scope: {
+                url: '=myInnerform'
+            },
+            link: function (scope, element, attrs) {
+            },
+            templateUrl: "templates/innerform.html"
+        };
+    };
+
+    module.directive("myInnerform", myInnerform);
+}(angular.module("app")));
 	

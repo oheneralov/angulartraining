@@ -1,10 +1,7 @@
 /**
  * Created by Oleksandr_Generalov on 10/23/2015.
  */
-/**
- * Created by Oleksandr_Generalov on 10/21/2015.
- */
-(function(module) {
+(function (module) {
     var ModalController = function ($scope, $uibModal) {
         $scope.ok = function () {
             $uibModal.close("ok");

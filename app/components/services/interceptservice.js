@@ -7,8 +7,6 @@
             request: function (config) {
                 var authService = $injector.get('UserFactory');
                 var token = authService.getToken();
-                //console.log("token: " + token);
-
                 if (token) {
                     config.headers['Authorization'] = 'Bearer ' + token;
                 }
@@ -19,11 +17,9 @@
                     $location.url('/home');
                 }
                 return $q.reject(response);
-
-
             }
         }
     }
-        module.factory("authInterceptor", authInterceptor);
-    }(angular.module("app")));
+    module.factory("authInterceptor", authInterceptor);
+}(angular.module("app")));
 

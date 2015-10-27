@@ -12,46 +12,78 @@
     <!-- build:js /build/angular-training.js -->
     <script src="/app/app.js"></script>
     <script src="/app/components/controllers/mainController.js"></script>
-	<script src="/app/components//directives/directives.js"></script>
-	<script src="/app/components/filters/filters.js"></script>
-	<script src="/app/components/services/services.js"></script>
-	<script src="angular-route.js">
-	<script src="/bower_components/angular-route/angular-route.js">
-    <!-- /build -->
-</head>
-<body ng-app="app">
-	
-
-		<div ng-controller="catController">
-			<h2>Task 3.1</h2>
-			<div>			
-			<ul >
-					<li ng-repeat = "currentcat in catsinfo">{{currentcat.name}}
-					<span ng-show="currentcat.isviewed">&nbsp;yes</span>
-				</li>
-			</ul></div>
-			<div>
-				<h3>Add a cat</h3>
-				<form  ng-app="myApp" name="CatForm" method="/getdafsd" novalidate ng-submit = "saveCat($event, cat)" my-submit>
-				<div>
-					<input name = "cName" type = "text" placeholder = "cat name" required ng-model = "cat.name">
-				</div>
-				<div ng-show="CatForm.$submitted || CatForm.cName.$touched">
-					<div ng-show="CatForm.cName.$error.required">Enter name.</div>
-				</div>
-				<div my-innerform="cat.imageurl">
-				</div>
-				<div>
-
-					<input type="submit" ng-disabled = "CatForm.$invalid">
-					<input type = "button" value="cancel">
-		
-				</div>
-			</div>
-	
-		
-		
+    <script src="/app/components//directives/directives.js"></script>
+    <script src="/app/components/filters/filters.js"></script>
+    <script src="/app/components/services/services.js"></script>
+    <script src="angular-route.js">
+        <
+        script
+        src = "/bower_components/angular-route/angular-route.js" >
+                    <!-- /build -->
+                < / head >
+                < body
+        ng - app = "app" >
 
 
-</body>
-</html>
+                < div
+        ng - controller = "catController" >
+                < h2 > Task
+        3.1 < / h2 >
+        < div >
+        < ul >
+        < li
+        ng - repeat = "currentcat in catsinfo" > {
+        {
+            currentcat.name
+        }
+        }
+        <
+        span
+        ng - show = "currentcat.isviewed" > & nbsp;
+        yes < / span >
+        < / li >
+        < /ul></
+        div >
+        < div >
+        < h3 > Add
+        a
+        cat < / h3 >
+        < form
+        ng - app = "myApp"
+        name = "CatForm"
+        method = "/getdafsd"
+        novalidate
+        ng - submit = "saveCat($event, cat)"
+        my - submit >
+        < div >
+        < input
+        name = "cName"
+        type = "text"
+        placeholder = "cat name"
+        required
+        ng - model = "cat.name" >
+                < / div >
+                < div
+        ng - show = "CatForm.$submitted || CatForm.cName.$touched" >
+                < div
+        ng - show = "CatForm.cName.$error.required" > Enter
+        name. < / div >
+        < / div >
+        < div
+        my - innerform = "cat.imageurl" >
+                < / div >
+                < div >
+
+                < input
+        type = "submit"
+        ng - disabled = "CatForm.$invalid" >
+                < input
+        type = "button"
+        value = "cancel" >
+
+                < / div >
+                < / div >
+
+
+                < / body >
+                < / html >

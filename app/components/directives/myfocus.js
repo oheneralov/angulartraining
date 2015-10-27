@@ -1,15 +1,12 @@
-(function(module) {	
+(function (module) {
 
-	var myFocus = function() {
-	  return {
-		link: function(scope, element, attrs) {
-			element[0].focus(); 
+    var myFocus = function () {
+        return {
+            link: function (scope, element, attrs) {
+                element[0].focus();
+            }
+        };
+    };
 
-		}
-		
-		
-	  };
-	};
-	
-	module.directive("myFocus", myFocus);
+    module.directive("myFocus", myFocus);
 }(angular.module("app")));
