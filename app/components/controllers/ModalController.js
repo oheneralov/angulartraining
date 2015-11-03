@@ -2,13 +2,13 @@
  * Created by Oleksandr_Generalov on 10/23/2015.
  */
 (function (module) {
-    var ModalController = function ($scope, $uibModal) {
+    var ModalController = function ($scope, $modalInstance) {
         $scope.ok = function () {
-            $uibModal.close("ok");
+            $modalInstance.close("ok");
         };
 
         $scope.cancel = function () {
-            $uibModal.dismiss('cancel');
+            $modalInstance.dismiss('cancel');
         };
 
     };
