@@ -1,4 +1,4 @@
 angular-training
 ================
 
-Repository for training about Angular
+Repository for training about AngularUI
