@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src= "scripts/script.js"></script>
+<body>
+
+<div ng-app="docsTemplateUrlDirective" ng-init="firstName='John'">
+
+<div ng-controller="Controller">
+  <div my-customer age = "25" type="name"></div>
+  <div my-customer age = "30" type="address"></div>
+  Date format: <input ng-model="format"> <hr/>
+  Current time is: <span my-current-time="format"></span>
+</div>
+</div>
+
+</body>
+</html>
